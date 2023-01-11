@@ -1,0 +1,17 @@
+pipeline {
+ agent none
+ stages {
+     stage('stage 1') {
+                agent {label 'projectB1'}
+         steps {
+           echo 'this is stage 1'
+                    }
+              }
+        stage('stage 1-A') {
+                agent {label 'jenkinslave'}
+         steps {
+           echo 'this is stage 1-A'
+                   }
+      }
+}      
+ 
